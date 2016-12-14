@@ -1,0 +1,33 @@
+{
+  "name": "mapify",
+  "version": "0.1.0",
+  "description": "react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify -v -d -t [ reactify --es6 ] main.js -o compiled.js",
+    "build": "NODE_ENV=production browserify -t [ reactify --es6 ] main.js | uglifyjs > compiled.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/footl/mapify.git"
+  },
+  "keywords": [
+    "react",
+    "app",
+    "webpack"
+  ],
+  "author": "Kapil Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/footl/mapify/issues"
+  },
+  "homepage": "https://github.com/footl/mapify#readme",
+  "dependencies": {
+    "browserify": "^13.1.1",
+    "react": "^15.4.1",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.7.5",
+    "watchify": "^3.7.0"
+  }
+}
